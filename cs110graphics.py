@@ -880,8 +880,8 @@ def _list_average(points):
     points = [i[j] for i in points for j in range(len(i))]
     pointsX = points[0:len(points):2]
     pointsY = points[1:len(points):2]
-    return (int(sum(pointsX)) / (len(pointsX)),
-            int(sum(pointsY)) / (len(pointsY)))
+    return (int((sum(pointsX)) / (len(pointsX))),
+            int((sum(pointsY)) / (len(pointsY))))
 
 
 ## A circle, which can be added to a Window object.
