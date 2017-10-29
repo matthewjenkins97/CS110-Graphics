@@ -4,7 +4,7 @@
 # Paul Magnus '18, Ines Ayara '20, Matthew R. Jenkins '20
 #
 # Summer 2017
-from tkinter import *  # for pretty much everything graphics related
+from Tkinter import *  # for pretty much everything graphics related
 import math  # for rotate
 import inspect
 from PIL import Image as image  # for Image class
