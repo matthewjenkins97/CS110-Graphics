@@ -83,6 +83,12 @@ class Window:
         graphic._tag = None
         graphic._enabled = False
 
+    def get_height(self):
+        return self._height
+
+    def get_width(self):
+        return self._width
+
     ## Sets the background color of the canvas.
     # Required Parameters:
     # - background - string
@@ -309,7 +315,7 @@ class GraphicalObject:
 
         def key_release(event):
             tkEvent = Event(event)
-            _call_handler(handler_object.handke_key_release, tkEvent)
+            _call_handler(handler_object.handle_key_release, tkEvent)
 
         def mouse_enter(event):
             tkEvent = Event(event)
@@ -486,7 +492,7 @@ class Fillable(GraphicalObject):
     # - degrees - int
     def rotate(self, degrees):
         # type checking
-        #print("DEBUG: before rotate: " + str(self._center))
+        # print("DEBUG: before rotate: " + str(self._center))
         assert isinstance(degrees, int), \
             "Make sure degrees is an int."
         # calculates radians, runs _rotate_helper, moves back to its center and
@@ -496,7 +502,7 @@ class Fillable(GraphicalObject):
             self._points[i] = _rotate_helper(self._points[i],
                                              radians,
                                              self._pivot)
-        #print("DEBUG: after rotate: " + str(self._center))
+        # print("DEBUG: after rotate: " + str(self._center))
         self.move_to(self._center)
         self._refresh()
 
@@ -512,8 +518,8 @@ class Fillable(GraphicalObject):
         temp_center = self._center
         self.move_to((0, 0))
         for i in range(len(self._points)):
-            temp_tuple = ((self._points[i][0] * factor,
-                          self._points[i][1] * factor))
+            temp_tuple = (int(self._points[i][0] * factor),
+                          int(self._points[i][1] * factor))
             self._points[i] = temp_tuple
         self.move_to(temp_center)
         self._center = temp_center
@@ -563,6 +569,7 @@ class Fillable(GraphicalObject):
 # Aids in rotation.
 def _rotate_helper(point, angle, pivot):
     # type checking
+    # print("DEBUG: point = " + str(point) + ", angle = " + str(angle) + ", pivot = " + str(pivot))
     assert isinstance(point, tuple) and len(point) == 2 and \
         isinstance(angle, float) and isinstance(pivot, tuple) and \
         len(pivot) == 2 and isinstance(point[0], int) and \
@@ -1082,14 +1089,14 @@ class Square(Fillable):
         self._center = center
         # creating points and then adding object to the canvas and
         # window._graphics
-        self._points = [(self._center[0] - self._width / 2,
-                         self._center[1] - self._height / 2),
-                        (self._center[0] + self._width / 2,
-                         self._center[1] - self._height / 2),
-                        (self._center[0] + self._width / 2,
-                         self._center[1] + self._height / 2),
-                        (self._center[0] - self._width / 2,
-                         self._center[1] + self._height / 2)]
+        self._points = [(self._center[0] - self._width // 2,
+                         self._center[1] - self._height // 2),
+                        (self._center[0] + self._width // 2,
+                         self._center[1] - self._height // 2),
+                        (self._center[0] + self._width // 2,
+                         self._center[1] + self._height // 2),
+                        (self._center[0] - self._width // 2,
+                         self._center[1] + self._height // 2)]
         self._enabled = False
         self._tag = self._window._canvas.create_polygon(
             *self._points,
@@ -1112,14 +1119,14 @@ class Square(Fillable):
         self._width = side_length
         self._height = side_length
         # re-rendering each point
-        self._points = [(self._center[0] - self._width / 2,
-                         self._center[1] - self._height / 2),
-                        (self._center[0] + self._width / 2,
-                         self._center[1] - self._height / 2),
-                        (self._center[0] + self._width / 2,
-                         self._center[1] + self._height / 2),
-                        (self._center[0] - self._width / 2,
-                         self._center[1] + self._height / 2)]
+        self._points = [(self._center[0] - self._width // 2,
+                         self._center[1] - self._height // 2),
+                        (self._center[0] + self._width // 2,
+                         self._center[1] - self._height // 2),
+                        (self._center[0] + self._width // 2,
+                         self._center[1] + self._height // 2),
+                        (self._center[0] - self._width // 2,
+                         self._center[1] + self._height // 2)]
         self._refresh()
 
 
@@ -1149,14 +1156,14 @@ class Rectangle(Fillable):
         self._height = height
         self._center = center
         # rendering each corner point
-        self._points = [(self._center[0] - self._width / 2,
-                         self._center[1] - self._height / 2),
-                        (self._center[0] + self._width / 2,
-                         self._center[1] - self._height / 2),
-                        (self._center[0] + self._width / 2,
-                         self._center[1] + self._height / 2),
-                        (self._center[0] - self._width / 2,
-                         self._center[1] + self._height / 2)]
+        self._points = [(self._center[0] - self._width // 2,
+                         self._center[1] - self._height // 2),
+                        (self._center[0] + self._width // 2,
+                         self._center[1] - self._height // 2),
+                        (self._center[0] + self._width // 2,
+                         self._center[1] + self._height // 2),
+                        (self._center[0] - self._width // 2,
+                         self._center[1] + self._height // 2)]
         # adding object to canvas and then to window._graphics
         self._enabled = False
         self._tag = self._window._canvas.create_polygon(
