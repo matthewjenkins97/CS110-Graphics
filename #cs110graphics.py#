@@ -470,7 +470,7 @@ class Fillable(GraphicalObject):
         # any changes that were made
         self._border_color = "black"
         self._border_width = 2
-        self._fill_color = "white"
+        self._fill_color = ""
         self._pivot = self._center
 
     ## Returns the border color of a Fillable.
@@ -523,11 +523,13 @@ class Fillable(GraphicalObject):
             temp_tuple = (int(self._points[i][0] * factor),
                           int(self._points[i][1] * factor))
             self._points[i] = temp_tuple
-        self._pivot = (round(self._pivot[0] * factor),
-                       round(self._pivot[1] * factor))
         self.move_to(temp_center)
         self._center = temp_center
         self._refresh()
+
+        # update pivot
+        self._pivot = (round(self._pivot[0] * factor),
+                       round(self._pivot[1] * factor))
 
     def move(self, dx, dy):
         GraphicalObject.move(self, dx, dy)
@@ -655,8 +657,6 @@ class Image(GraphicalObject):
                                                       self._center[1],
                                                       image=self._img)
         self._enabled = True
-
-        self._window._update_tag(self)
 
     ## Moves a graphical object dx pixels horizontally and dy pixels vertically.
     # Required Parameters:
@@ -802,8 +802,6 @@ class Text(GraphicalObject):
                                                            self._size))
         self._enabled = True
 
-        self._window._update_tag(self)
-
     ## Moves a graphical object dx pixels horizontally and dy pixels vertically.
     # Required Parameters:
     # - dx - int
@@ -884,7 +882,6 @@ class Polygon(Fillable):
         self._window = window
         self._points = points
         self._center = _list_average(self._points)
-        self._pivot = self._center
         self._enabled = False
         self._tag = self._window._canvas.create_polygon(
             *self._points,
