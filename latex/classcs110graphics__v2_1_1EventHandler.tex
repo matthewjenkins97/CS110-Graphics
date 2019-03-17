@@ -1,0 +1,266 @@
+\hypertarget{classcs110graphics__v2_1_1EventHandler}{}\section{cs110graphics\+\_\+v2.\+Event\+Handler Class Reference}
+\label{classcs110graphics__v2_1_1EventHandler}\index{cs110graphics\_v2.EventHandler@{cs110graphics\_v2.EventHandler}}
+
+
+The \mbox{\hyperlink{classcs110graphics__v2_1_1EventHandler}{Event\+Handler}} class should be extended by any class that reacts to user input in the form of some action with the computer mouse or the keyboard.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcs110graphics__v2_1_1EventHandler_ad00279276ecb947fb9ce6aa7e121e032}\label{classcs110graphics__v2_1_1EventHandler_ad00279276ecb947fb9ce6aa7e121e032}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self)
+\item 
+def \mbox{\hyperlink{classcs110graphics__v2_1_1EventHandler_afd5363f8b0601956f0d6ae320bb43b4a}{handle\+\_\+key\+\_\+press}} (self, event)
+\begin{DoxyCompactList}\small\item\em Handles a key press. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classcs110graphics__v2_1_1EventHandler_a955b2d286040398c47d1bb8c05091cf7}{handle\+\_\+key\+\_\+release}} (self, event)
+\begin{DoxyCompactList}\small\item\em Handles a key release. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classcs110graphics__v2_1_1EventHandler_a642711bb1f5c49ed0f0a1caf05dc14e4}{handle\+\_\+mouse\+\_\+enter}} (self, event)
+\begin{DoxyCompactList}\small\item\em Handles when a mouse enters an object. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classcs110graphics__v2_1_1EventHandler_a1a7544431c591f33313a2432222a2197}{handle\+\_\+mouse\+\_\+leave}} (self, event)
+\begin{DoxyCompactList}\small\item\em Handles when a mouse leaves an object. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classcs110graphics__v2_1_1EventHandler_a33ee3347d8a4d0235ebc1f2e9f900699}{handle\+\_\+mouse\+\_\+move}} (self, event)
+\begin{DoxyCompactList}\small\item\em Handles a mouse move. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classcs110graphics__v2_1_1EventHandler_ab7da753bd26e28aed9bce86968314ae1}{handle\+\_\+mouse\+\_\+press}} (self, event)
+\begin{DoxyCompactList}\small\item\em Handles a mouse press. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classcs110graphics__v2_1_1EventHandler_a78d4d8dfc24ea86540c3ce9cf2b27a24}{handle\+\_\+mouse\+\_\+release}} (self, event)
+\begin{DoxyCompactList}\small\item\em Handles a mouse release. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \mbox{\hyperlink{classcs110graphics__v2_1_1EventHandler}{Event\+Handler}} class should be extended by any class that reacts to user input in the form of some action with the computer mouse or the keyboard. 
+
+Each method inherited from the \mbox{\hyperlink{classcs110graphics__v2_1_1EventHandler}{Event\+Handler}} class takes an \mbox{\hyperlink{classcs110graphics__v2_1_1Event}{Event}} object as a parameter. The methods available to \mbox{\hyperlink{classcs110graphics__v2_1_1Event}{Event}} can be useful for interpreting how a call to each method should be handled. For example usage of event.\+get\+\_\+key() can be used to distinguish between the keys used in navigating a character in a game.
+
+A sample program using the \mbox{\hyperlink{classcs110graphics__v2_1_1EventHandler}{Event\+Handler}} is shown below. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{from} cs110graphics \textcolor{keyword}{import} *}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{class }Bot(EventHandler):}
+\DoxyCodeLine{    \textcolor{stringliteral}{""" A bot made up of a square that detects interaction from the user. """}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{def }\_\_init\_\_(self, window):}
+\DoxyCodeLine{        \textcolor{stringliteral}{""" Creates the bot which is comprised of one square and adds the Bot}}
+\DoxyCodeLine{\textcolor{stringliteral}{        as the event handler for the square body. """}}
+\DoxyCodeLine{        self.\_window = window}
+\DoxyCodeLine{}
+\DoxyCodeLine{        \textcolor{comment}{\# create the body of the Bot and add this class}}
+\DoxyCodeLine{        \textcolor{comment}{\# as the handler}}
+\DoxyCodeLine{        self.\_body = Square(window)}
+\DoxyCodeLine{        self.\_body.add\_handler(self)}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{def }add\_to\_window(self):}
+\DoxyCodeLine{        \textcolor{stringliteral}{""" This method adds the graphical representation of the bot}}
+\DoxyCodeLine{\textcolor{stringliteral}{        to the window. """}}
+\DoxyCodeLine{        self.\_window.add(self.\_body)}
+\DoxyCodeLine{}
+\DoxyCodeLine{    }
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{def }handle\_key\_press(self, event):}
+\DoxyCodeLine{        \textcolor{stringliteral}{""" Prints what key was pressed. This is called whenever a key is}}
+\DoxyCodeLine{\textcolor{stringliteral}{        pressed regardless of the mouse position. """}}
+\DoxyCodeLine{        print(event.get\_key(), \textcolor{stringliteral}{"was pressed"})}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{def }handle\_key\_release(self, event):}
+\DoxyCodeLine{        \textcolor{stringliteral}{""" Prints what key was released. This is called whenever a key is}}
+\DoxyCodeLine{\textcolor{stringliteral}{        pressed regardless of the mouse position. """}}
+\DoxyCodeLine{        print(event.get\_key(), \textcolor{stringliteral}{"was released"})}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{def }handle\_mouse\_enter(self, event):}
+\DoxyCodeLine{        \textcolor{stringliteral}{""" Prints where the mouse entered the Bot. """}}
+\DoxyCodeLine{        print(\textcolor{stringliteral}{"The mouse entered the bot at"}, event.get\_mouse\_location())}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{def }handle\_mouse\_leave(self, event):}
+\DoxyCodeLine{        \textcolor{stringliteral}{""" Prints where the mouse left the Bot. """}}
+\DoxyCodeLine{        print(\textcolor{stringliteral}{"The mouse left the bot at"}, event.get\_mouse\_location())}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{def }handle\_mouse\_move(self, event):}
+\DoxyCodeLine{        \textcolor{stringliteral}{""" Prints when the mouse moves while on the Bot. """}}
+\DoxyCodeLine{        print(\textcolor{stringliteral}{"The mouse moved to"}, event.get\_mouse\_location())}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{def }handle\_mouse\_press(self, event):}
+\DoxyCodeLine{        \textcolor{stringliteral}{""" Prints where the mouse was pressed while on the Bot. """}}
+\DoxyCodeLine{        print(\textcolor{stringliteral}{"The mouse was pressed at"}, event.get\_mouse\_location())}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{def }handle\_mouse\_release(self, event):}
+\DoxyCodeLine{        \textcolor{stringliteral}{""" Prints where the mouse was released while on the Bot. """}}
+\DoxyCodeLine{        print(\textcolor{stringliteral}{"The mouse was released at"}, event.get\_mouse\_location())}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{def }main(window):}
+\DoxyCodeLine{    bot = Bot(window)}
+\DoxyCodeLine{    bot.add\_to\_window()}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordflow}{if} \_\_name\_\_ == \textcolor{stringliteral}{"\_\_main\_\_"}:}
+\DoxyCodeLine{    StartGraphicsSystem(main)}
+\end{DoxyCode}
+ 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classcs110graphics__v2_1_1EventHandler_afd5363f8b0601956f0d6ae320bb43b4a}\label{classcs110graphics__v2_1_1EventHandler_afd5363f8b0601956f0d6ae320bb43b4a}} 
+\index{cs110graphics\_v2.EventHandler@{cs110graphics\_v2.EventHandler}!handle\_key\_press@{handle\_key\_press}}
+\index{handle\_key\_press@{handle\_key\_press}!cs110graphics\_v2.EventHandler@{cs110graphics\_v2.EventHandler}}
+\subsubsection{\texorpdfstring{handle\_key\_press()}{handle\_key\_press()}}
+{\footnotesize\ttfamily def cs110graphics\+\_\+v2.\+Event\+Handler.\+handle\+\_\+key\+\_\+press (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{event }\end{DoxyParamCaption})}
+
+
+
+Handles a key press. 
+
+This function will be called whenever a key is pressed while the window is active. The event parameter can be used to determine which key was pressed. For example\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{class }Handler(EventHandler):}
+\DoxyCodeLine{    \textcolor{keyword}{def }handle\_key\_press(self, event):}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} \textcolor{stringliteral}{"a"} == event.get\_key():}
+\DoxyCodeLine{            \textcolor{comment}{\# do something when a is pressed...}}
+\DoxyCodeLine{        \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{            \textcolor{comment}{\# do something else...}}
+\end{DoxyCode}
+ 
+\begin{DoxyParams}{Parameters}
+{\em event} & -\/ \mbox{\hyperlink{classcs110graphics__v2_1_1Event}{Event}} -\/ the event that occurred \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcs110graphics__v2_1_1EventHandler_a955b2d286040398c47d1bb8c05091cf7}\label{classcs110graphics__v2_1_1EventHandler_a955b2d286040398c47d1bb8c05091cf7}} 
+\index{cs110graphics\_v2.EventHandler@{cs110graphics\_v2.EventHandler}!handle\_key\_release@{handle\_key\_release}}
+\index{handle\_key\_release@{handle\_key\_release}!cs110graphics\_v2.EventHandler@{cs110graphics\_v2.EventHandler}}
+\subsubsection{\texorpdfstring{handle\_key\_release()}{handle\_key\_release()}}
+{\footnotesize\ttfamily def cs110graphics\+\_\+v2.\+Event\+Handler.\+handle\+\_\+key\+\_\+release (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{event }\end{DoxyParamCaption})}
+
+
+
+Handles a key release. 
+
+This method will be called whenever a key is released while the window is active. The event parameter can be used to determine which key was pressed. For example\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{class }Handler(EventHandler):}
+\DoxyCodeLine{    \textcolor{keyword}{def }handle\_key\_release(self, event):}
+\DoxyCodeLine{        \textcolor{keywordflow}{if} \textcolor{stringliteral}{"a"} == event.get\_key():}
+\DoxyCodeLine{            \textcolor{comment}{\# do something when a is released...}}
+\DoxyCodeLine{        \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{            \textcolor{comment}{\# do something else...}}
+\end{DoxyCode}
+ 
+\begin{DoxyParams}{Parameters}
+{\em event} & -\/ \mbox{\hyperlink{classcs110graphics__v2_1_1Event}{Event}} -\/ the event that occurred \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcs110graphics__v2_1_1EventHandler_a642711bb1f5c49ed0f0a1caf05dc14e4}\label{classcs110graphics__v2_1_1EventHandler_a642711bb1f5c49ed0f0a1caf05dc14e4}} 
+\index{cs110graphics\_v2.EventHandler@{cs110graphics\_v2.EventHandler}!handle\_mouse\_enter@{handle\_mouse\_enter}}
+\index{handle\_mouse\_enter@{handle\_mouse\_enter}!cs110graphics\_v2.EventHandler@{cs110graphics\_v2.EventHandler}}
+\subsubsection{\texorpdfstring{handle\_mouse\_enter()}{handle\_mouse\_enter()}}
+{\footnotesize\ttfamily def cs110graphics\+\_\+v2.\+Event\+Handler.\+handle\+\_\+mouse\+\_\+enter (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{event }\end{DoxyParamCaption})}
+
+
+
+Handles when a mouse enters an object. 
+
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000001}{Bug}}]Overrides of this method is likely to be called more often than expected and many \mbox{\hyperlink{classcs110graphics__v2_1_1GraphicalObject}{Graphical\+Object}} methods will not work correctly with when called within the method, avoid using this if possible.\end{DoxyRefDesc}
+
+
+This is called by the system when the mouse enters the \mbox{\hyperlink{classcs110graphics__v2_1_1GraphicalObject}{Graphical\+Object}} that this handler is an event handler for. The event parameter can be used to determine the location at which the mouse entered the object. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{class }Handler(EventHandler):}
+\DoxyCodeLine{    \textcolor{keyword}{def }handle\_mouse\_enter(self, event):}
+\DoxyCodeLine{        mouse\_location = event.get\_mouse\_location()}
+\end{DoxyCode}
+ 
+\begin{DoxyParams}{Parameters}
+{\em event} & -\/ \mbox{\hyperlink{classcs110graphics__v2_1_1Event}{Event}} -\/ the event that occurred \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcs110graphics__v2_1_1EventHandler_a1a7544431c591f33313a2432222a2197}\label{classcs110graphics__v2_1_1EventHandler_a1a7544431c591f33313a2432222a2197}} 
+\index{cs110graphics\_v2.EventHandler@{cs110graphics\_v2.EventHandler}!handle\_mouse\_leave@{handle\_mouse\_leave}}
+\index{handle\_mouse\_leave@{handle\_mouse\_leave}!cs110graphics\_v2.EventHandler@{cs110graphics\_v2.EventHandler}}
+\subsubsection{\texorpdfstring{handle\_mouse\_leave()}{handle\_mouse\_leave()}}
+{\footnotesize\ttfamily def cs110graphics\+\_\+v2.\+Event\+Handler.\+handle\+\_\+mouse\+\_\+leave (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{event }\end{DoxyParamCaption})}
+
+
+
+Handles when a mouse leaves an object. 
+
+This is called by the system when the mouse leaves the \mbox{\hyperlink{classcs110graphics__v2_1_1GraphicalObject}{Graphical\+Object}} that this handler is an event handler for. The event parameter can be used to determine the location at which the mouse left the object. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{class }Handler(EventHandler):}
+\DoxyCodeLine{    \textcolor{keyword}{def }handle\_mouse\_leave(self, event):}
+\DoxyCodeLine{        mouse\_location = event.get\_mouse\_location()}
+\end{DoxyCode}
+ 
+\begin{DoxyParams}{Parameters}
+{\em event} & -\/ \mbox{\hyperlink{classcs110graphics__v2_1_1Event}{Event}} -\/ the event that occurred \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcs110graphics__v2_1_1EventHandler_a33ee3347d8a4d0235ebc1f2e9f900699}\label{classcs110graphics__v2_1_1EventHandler_a33ee3347d8a4d0235ebc1f2e9f900699}} 
+\index{cs110graphics\_v2.EventHandler@{cs110graphics\_v2.EventHandler}!handle\_mouse\_move@{handle\_mouse\_move}}
+\index{handle\_mouse\_move@{handle\_mouse\_move}!cs110graphics\_v2.EventHandler@{cs110graphics\_v2.EventHandler}}
+\subsubsection{\texorpdfstring{handle\_mouse\_move()}{handle\_mouse\_move()}}
+{\footnotesize\ttfamily def cs110graphics\+\_\+v2.\+Event\+Handler.\+handle\+\_\+mouse\+\_\+move (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{event }\end{DoxyParamCaption})}
+
+
+
+Handles a mouse move. 
+
+This is called by the system when the mouse moves within the \mbox{\hyperlink{classcs110graphics__v2_1_1GraphicalObject}{Graphical\+Object}} that this handler is an event handler for. The event parameter can be used to determine the location that the mouse moved to. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{class }Handler(EventHandler):}
+\DoxyCodeLine{    \textcolor{keyword}{def }handle\_mouse\_move(self, event):}
+\DoxyCodeLine{        mouse\_location = event.get\_mouse\_location()}
+\end{DoxyCode}
+ 
+\begin{DoxyParams}{Parameters}
+{\em event} & -\/ \mbox{\hyperlink{classcs110graphics__v2_1_1Event}{Event}} -\/ the event that occurred \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcs110graphics__v2_1_1EventHandler_ab7da753bd26e28aed9bce86968314ae1}\label{classcs110graphics__v2_1_1EventHandler_ab7da753bd26e28aed9bce86968314ae1}} 
+\index{cs110graphics\_v2.EventHandler@{cs110graphics\_v2.EventHandler}!handle\_mouse\_press@{handle\_mouse\_press}}
+\index{handle\_mouse\_press@{handle\_mouse\_press}!cs110graphics\_v2.EventHandler@{cs110graphics\_v2.EventHandler}}
+\subsubsection{\texorpdfstring{handle\_mouse\_press()}{handle\_mouse\_press()}}
+{\footnotesize\ttfamily def cs110graphics\+\_\+v2.\+Event\+Handler.\+handle\+\_\+mouse\+\_\+press (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{event }\end{DoxyParamCaption})}
+
+
+
+Handles a mouse press. 
+
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000002}{Bug}}]Graphical\+Objects may not update correctly if moved or modified within this method. You can use this for setting variables, though.\end{DoxyRefDesc}
+
+
+This is called by the system when a mouse button is pressed while the mouse is on the \mbox{\hyperlink{classcs110graphics__v2_1_1GraphicalObject}{Graphical\+Object}} that this handler is an event handler for. The event parameter can be used to determine the location at which the mouse button was pressed and which mouse button was pressed. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{class }Handler(EventHandler):}
+\DoxyCodeLine{    \textcolor{keyword}{def }handle\_mouse\_press(self, event):}
+\DoxyCodeLine{        mouse\_location = event.get\_mouse\_location()}
+\DoxyCodeLine{        mouse\_button = event.get\_button()}
+\end{DoxyCode}
+ 
+\begin{DoxyParams}{Parameters}
+{\em event} & -\/ \mbox{\hyperlink{classcs110graphics__v2_1_1Event}{Event}} -\/ the event that occurred \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcs110graphics__v2_1_1EventHandler_a78d4d8dfc24ea86540c3ce9cf2b27a24}\label{classcs110graphics__v2_1_1EventHandler_a78d4d8dfc24ea86540c3ce9cf2b27a24}} 
+\index{cs110graphics\_v2.EventHandler@{cs110graphics\_v2.EventHandler}!handle\_mouse\_release@{handle\_mouse\_release}}
+\index{handle\_mouse\_release@{handle\_mouse\_release}!cs110graphics\_v2.EventHandler@{cs110graphics\_v2.EventHandler}}
+\subsubsection{\texorpdfstring{handle\_mouse\_release()}{handle\_mouse\_release()}}
+{\footnotesize\ttfamily def cs110graphics\+\_\+v2.\+Event\+Handler.\+handle\+\_\+mouse\+\_\+release (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{event }\end{DoxyParamCaption})}
+
+
+
+Handles a mouse release. 
+
+This is called by the system when a mouse button is released while the mouse is on the \mbox{\hyperlink{classcs110graphics__v2_1_1GraphicalObject}{Graphical\+Object}} that this handler is an event handler for. The event parameter can be used to determine the location at which the mouse button was released and which mouse button was released. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{class }Handler(EventHandler):}
+\DoxyCodeLine{    \textcolor{keyword}{def }handle\_mouse\_release(self, event):}
+\DoxyCodeLine{        mouse\_location = event.get\_mouse\_location()}
+\DoxyCodeLine{        mouse\_button = event.get\_button()}
+\end{DoxyCode}
+ 
+\begin{DoxyParams}{Parameters}
+{\em event} & -\/ \mbox{\hyperlink{classcs110graphics__v2_1_1Event}{Event}} -\/ the event that occurred \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+cs110graphics\+\_\+v2.\+py\end{DoxyCompactItemize}

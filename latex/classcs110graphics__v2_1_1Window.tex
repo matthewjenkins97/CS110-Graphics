@@ -1,0 +1,201 @@
+\hypertarget{classcs110graphics__v2_1_1Window}{}\section{cs110graphics\+\_\+v2.\+Window Class Reference}
+\label{classcs110graphics__v2_1_1Window}\index{cs110graphics\_v2.Window@{cs110graphics\_v2.Window}}
+
+
+\mbox{\hyperlink{classcs110graphics__v2_1_1Window}{Window}} acts as a canvas which other objects can be put onto.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classcs110graphics__v2_1_1Window_a93fbb743ae7c0e4461ed019915e57172}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, width, height, background, name, first\+\_\+function=None, master=None)
+\item 
+def \mbox{\hyperlink{classcs110graphics__v2_1_1Window_ad2e9593c90d1672b40750c6d321eefca}{add}} (self, graphic)
+\begin{DoxyCompactList}\small\item\em Adds an object to the \mbox{\hyperlink{classcs110graphics__v2_1_1Window}{Window}}. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classcs110graphics__v2_1_1Window_a684106ecf2dbfb9159731afb7698e238}{remove}} (self, graphic)
+\begin{DoxyCompactList}\small\item\em Removes an object from the \mbox{\hyperlink{classcs110graphics__v2_1_1Window}{Window}}. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classcs110graphics__v2_1_1Window_ac29879272cf20339e3d8d94e7c763b76}{get\+\_\+height}} (self)
+\begin{DoxyCompactList}\small\item\em Returns the height of the window as an integer. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classcs110graphics__v2_1_1Window_a94c8bd08e4b0d3aab302e34bef5751b7}{get\+\_\+width}} (self)
+\begin{DoxyCompactList}\small\item\em Returns the width of the window as an integer. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classcs110graphics__v2_1_1Window_a9d2ea5c7a8da999677a093016d012733}{set\+\_\+background}} (self, background)
+\begin{DoxyCompactList}\small\item\em Sets the background color of the canvas. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classcs110graphics__v2_1_1Window_aff1c2aa712e6ed9c444ebce3c8501c5a}{set\+\_\+height}} (self, height)
+\begin{DoxyCompactList}\small\item\em Sets the height of the canvas. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classcs110graphics__v2_1_1Window_a51c356f41a601bb5262901464ee8e564}{set\+\_\+title}} (self, name)
+\begin{DoxyCompactList}\small\item\em Sets the title of the window holding the canvas. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classcs110graphics__v2_1_1Window_a4cc380067fac12547e4e954e4f2a7aa7}{set\+\_\+width}} (self, width)
+\begin{DoxyCompactList}\small\item\em Sets the width of the canvas. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classcs110graphics__v2_1_1Window_a15dd1072a18c76df818f061b28009120}{refresh}} (self, start=None)
+\begin{DoxyCompactList}\small\item\em Refreshes all objects in the window. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{classcs110graphics__v2_1_1Window}{Window}} acts as a canvas which other objects can be put onto. 
+
+The standard size of window created by Start\+Graphics\+System is width = 400, height = 400. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcs110graphics__v2_1_1Window_a93fbb743ae7c0e4461ed019915e57172}\label{classcs110graphics__v2_1_1Window_a93fbb743ae7c0e4461ed019915e57172}} 
+\index{cs110graphics\_v2.Window@{cs110graphics\_v2.Window}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!cs110graphics\_v2.Window@{cs110graphics\_v2.Window}}
+\subsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def cs110graphics\+\_\+v2.\+Window.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{width,  }\item[{}]{height,  }\item[{}]{background,  }\item[{}]{name,  }\item[{}]{first\+\_\+function = {\ttfamily None},  }\item[{}]{master = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & -\/ int -\/ The width of the canvas \\
+\hline
+{\em height} & -\/ int -\/ The height of the canvas \\
+\hline
+{\em background} & -\/ str -\/ Background color of canvas. Can be either the name of a color (\char`\"{}yellow\char`\"{}), or a hex code (\char`\"{}\#\+F\+F\+F\+F00\char`\"{}) \\
+\hline
+{\em name} & -\/ str -\/ The title of the window \\
+\hline
+{\em first\+\_\+function} & -\/ proc(\+Window) -\/ {\bfseries{(default\+: None)}} When the window is created, it runs this function. \\
+\hline
+{\em master} & -\/ unknown type -\/ {\bfseries{(default\+: None)}} The parent widget. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+Unless you understand how Tkinter works do not change master 
+\end{DoxyWarning}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classcs110graphics__v2_1_1Window_ad2e9593c90d1672b40750c6d321eefca}\label{classcs110graphics__v2_1_1Window_ad2e9593c90d1672b40750c6d321eefca}} 
+\index{cs110graphics\_v2.Window@{cs110graphics\_v2.Window}!add@{add}}
+\index{add@{add}!cs110graphics\_v2.Window@{cs110graphics\_v2.Window}}
+\subsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily def cs110graphics\+\_\+v2.\+Window.\+add (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{graphic }\end{DoxyParamCaption})}
+
+
+
+Adds an object to the \mbox{\hyperlink{classcs110graphics__v2_1_1Window}{Window}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graphic} & -\/ \mbox{\hyperlink{classcs110graphics__v2_1_1GraphicalObject}{Graphical\+Object}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcs110graphics__v2_1_1Window_ac29879272cf20339e3d8d94e7c763b76}\label{classcs110graphics__v2_1_1Window_ac29879272cf20339e3d8d94e7c763b76}} 
+\index{cs110graphics\_v2.Window@{cs110graphics\_v2.Window}!get\_height@{get\_height}}
+\index{get\_height@{get\_height}!cs110graphics\_v2.Window@{cs110graphics\_v2.Window}}
+\subsubsection{\texorpdfstring{get\_height()}{get\_height()}}
+{\footnotesize\ttfamily def cs110graphics\+\_\+v2.\+Window.\+get\+\_\+height (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Returns the height of the window as an integer. 
+
+\begin{DoxyReturn}{Returns}
+height -\/ int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcs110graphics__v2_1_1Window_a94c8bd08e4b0d3aab302e34bef5751b7}\label{classcs110graphics__v2_1_1Window_a94c8bd08e4b0d3aab302e34bef5751b7}} 
+\index{cs110graphics\_v2.Window@{cs110graphics\_v2.Window}!get\_width@{get\_width}}
+\index{get\_width@{get\_width}!cs110graphics\_v2.Window@{cs110graphics\_v2.Window}}
+\subsubsection{\texorpdfstring{get\_width()}{get\_width()}}
+{\footnotesize\ttfamily def cs110graphics\+\_\+v2.\+Window.\+get\+\_\+width (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Returns the width of the window as an integer. 
+
+\begin{DoxyReturn}{Returns}
+width -\/ int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcs110graphics__v2_1_1Window_a15dd1072a18c76df818f061b28009120}\label{classcs110graphics__v2_1_1Window_a15dd1072a18c76df818f061b28009120}} 
+\index{cs110graphics\_v2.Window@{cs110graphics\_v2.Window}!refresh@{refresh}}
+\index{refresh@{refresh}!cs110graphics\_v2.Window@{cs110graphics\_v2.Window}}
+\subsubsection{\texorpdfstring{refresh()}{refresh()}}
+{\footnotesize\ttfamily def cs110graphics\+\_\+v2.\+Window.\+refresh (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{start = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+Refreshes all objects in the window. 
+
+All objects are redrawn in depth order. 
+\begin{DoxyParams}{Parameters}
+{\em start} & -\/ \mbox{\hyperlink{classcs110graphics__v2_1_1GraphicalObject}{Graphical\+Object}} -\/ {\bfseries{(default\+: None)}} only objects with the same or equal depth to this object are refreshed. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcs110graphics__v2_1_1Window_a684106ecf2dbfb9159731afb7698e238}\label{classcs110graphics__v2_1_1Window_a684106ecf2dbfb9159731afb7698e238}} 
+\index{cs110graphics\_v2.Window@{cs110graphics\_v2.Window}!remove@{remove}}
+\index{remove@{remove}!cs110graphics\_v2.Window@{cs110graphics\_v2.Window}}
+\subsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily def cs110graphics\+\_\+v2.\+Window.\+remove (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{graphic }\end{DoxyParamCaption})}
+
+
+
+Removes an object from the \mbox{\hyperlink{classcs110graphics__v2_1_1Window}{Window}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graphic} & -\/ \mbox{\hyperlink{classcs110graphics__v2_1_1GraphicalObject}{Graphical\+Object}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcs110graphics__v2_1_1Window_a9d2ea5c7a8da999677a093016d012733}\label{classcs110graphics__v2_1_1Window_a9d2ea5c7a8da999677a093016d012733}} 
+\index{cs110graphics\_v2.Window@{cs110graphics\_v2.Window}!set\_background@{set\_background}}
+\index{set\_background@{set\_background}!cs110graphics\_v2.Window@{cs110graphics\_v2.Window}}
+\subsubsection{\texorpdfstring{set\_background()}{set\_background()}}
+{\footnotesize\ttfamily def cs110graphics\+\_\+v2.\+Window.\+set\+\_\+background (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{background }\end{DoxyParamCaption})}
+
+
+
+Sets the background color of the canvas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em background} & -\/ string -\/ Background color of canvas. Can be either the name of a color (\char`\"{}yellow\char`\"{}), or a hex code (\char`\"{}\#\+F\+F\+F\+F00\char`\"{}) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcs110graphics__v2_1_1Window_aff1c2aa712e6ed9c444ebce3c8501c5a}\label{classcs110graphics__v2_1_1Window_aff1c2aa712e6ed9c444ebce3c8501c5a}} 
+\index{cs110graphics\_v2.Window@{cs110graphics\_v2.Window}!set\_height@{set\_height}}
+\index{set\_height@{set\_height}!cs110graphics\_v2.Window@{cs110graphics\_v2.Window}}
+\subsubsection{\texorpdfstring{set\_height()}{set\_height()}}
+{\footnotesize\ttfamily def cs110graphics\+\_\+v2.\+Window.\+set\+\_\+height (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{height }\end{DoxyParamCaption})}
+
+
+
+Sets the height of the canvas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em height} & -\/ int \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcs110graphics__v2_1_1Window_a51c356f41a601bb5262901464ee8e564}\label{classcs110graphics__v2_1_1Window_a51c356f41a601bb5262901464ee8e564}} 
+\index{cs110graphics\_v2.Window@{cs110graphics\_v2.Window}!set\_title@{set\_title}}
+\index{set\_title@{set\_title}!cs110graphics\_v2.Window@{cs110graphics\_v2.Window}}
+\subsubsection{\texorpdfstring{set\_title()}{set\_title()}}
+{\footnotesize\ttfamily def cs110graphics\+\_\+v2.\+Window.\+set\+\_\+title (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{name }\end{DoxyParamCaption})}
+
+
+
+Sets the title of the window holding the canvas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & -\/ string \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcs110graphics__v2_1_1Window_a4cc380067fac12547e4e954e4f2a7aa7}\label{classcs110graphics__v2_1_1Window_a4cc380067fac12547e4e954e4f2a7aa7}} 
+\index{cs110graphics\_v2.Window@{cs110graphics\_v2.Window}!set\_width@{set\_width}}
+\index{set\_width@{set\_width}!cs110graphics\_v2.Window@{cs110graphics\_v2.Window}}
+\subsubsection{\texorpdfstring{set\_width()}{set\_width()}}
+{\footnotesize\ttfamily def cs110graphics\+\_\+v2.\+Window.\+set\+\_\+width (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{width }\end{DoxyParamCaption})}
+
+
+
+Sets the width of the canvas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & -\/ height \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+cs110graphics\+\_\+v2.\+py\end{DoxyCompactItemize}

@@ -1,0 +1,113 @@
+C\+S110-\/\+Graphics is a graphical addiction to Python written in Python 2.\+7, for use in teaching environments. It was originally developed by me during the summer of 2017 for Hamilton College\textquotesingle{}s Computer Science department, and built upon and de-\/cluttered by Professor Alistair Campbell and Paul Magnus in later years.
+
+The backing environment is based off of tkinter\textquotesingle{}s canvas object. It also includes a Doxygen executable which builds a documentation using the cs110graphics.\+py file. The most up to date version of this executable (as well as the most up to date output files) have been included in the repository.
+
+\subsection*{Dependencies}
+
+This project uses tkinter, math, inspect, and Pillow (formerly P\+IL). Ensure these dependencies are installed before usage.
+
+\subsection*{Usage}
+
+Import it into a Python 2.\+7 file using \char`\"{}from cs110graphics import \textbackslash{}$\ast$\char`\"{}.
+
+\subsection*{Class \& Method Hierarchy}
+
+
+\begin{DoxyItemize}
+\item Event
+\begin{DoxyItemize}
+\item get\+\_\+button()
+\item get\+\_\+description()
+\item get\+\_\+key()
+\item get\+\_\+mouse\+\_\+location()
+\item get\+\_\+root\+\_\+mouse\+\_\+location()
+\end{DoxyItemize}
+\item Event\+Handler
+\begin{DoxyItemize}
+\item handle\+\_\+key\+\_\+press()
+\item handle\+\_\+key\+\_\+release()
+\item handle\+\_\+mouse\+\_\+enter()
+\item handle\+\_\+mouse\+\_\+leave()
+\item handle\+\_\+mouse\+\_\+move()
+\item handle\+\_\+mouse\+\_\+press()
+\item handle\+\_\+mouse\+\_\+release()
+\end{DoxyItemize}
+\item Graphical\+Object
+\begin{DoxyItemize}
+\item add\+\_\+handler()
+\item get\+\_\+center()
+\item get\+\_\+depth()
+\item move()
+\item move\+\_\+to()
+\item set\+\_\+depth()
+\end{DoxyItemize}
+\item Fillable (extends Graphical\+Object)
+\begin{DoxyItemize}
+\item get\+\_\+border\+\_\+color()
+\item get\+\_\+border\+\_\+width()
+\item get\+\_\+fill\+\_\+color()
+\item get\+\_\+pivot()
+\item rotate()
+\item scale()
+\item set\+\_\+border\+\_\+color()
+\item set\+\_\+border\+\_\+width()
+\item set\+\_\+fill\+\_\+color ()
+\item set\+\_\+pivot ()
+\end{DoxyItemize}
+\item Circle (extends Fillable)
+\begin{DoxyItemize}
+\item set\+\_\+radius()
+\end{DoxyItemize}
+\item Oval (extends Fillable)
+\begin{DoxyItemize}
+\item set\+\_\+radii()
+\end{DoxyItemize}
+\item Polygon (extends Fillable)
+\item Square (extends Fillable)
+\begin{DoxyItemize}
+\item set\+\_\+side\+\_\+length()
+\end{DoxyItemize}
+\item Rectangle (extends Fillable)
+\begin{DoxyItemize}
+\item set\+\_\+side\+\_\+lengths()
+\end{DoxyItemize}
+\item Image (extends Graphical\+Object)
+\begin{DoxyItemize}
+\item resize()
+\item rotate()
+\item scale()
+\end{DoxyItemize}
+\item Text (extends Graphical\+Object)
+\begin{DoxyItemize}
+\item set\+\_\+size()
+\item set\+\_\+text()
+\end{DoxyItemize}
+\item Timer
+\begin{DoxyItemize}
+\item set\+\_\+function()
+\item set\+\_\+interval()
+\item start()
+\item stop()
+\end{DoxyItemize}
+\item Window
+\begin{DoxyItemize}
+\item add()
+\item remove()
+\item get\+\_\+height()
+\item get\+\_\+width()
+\item set\+\_\+background()
+\item set\+\_\+height()
+\item set\+\_\+title()
+\item set\+\_\+width()
+\end{DoxyItemize}
+\item Run\+With\+Yield\+Delay()
+\item Start\+Graphics\+System()
+\end{DoxyItemize}
+
+More detailed information can be found within the html folder of this repository (produced by Doxygen).
+
+\subsection*{Sample Code}
+
+\subsection*{Todo}
+
+Port this to Python 3. 

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+        <title>CS110-Graphics</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+        <link href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css" rel="stylesheet" type="text/css">
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        
+        <script src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
+    </head>
+    <body>
+        <h1 id="cs110-graphics">CS110-Graphics</h1>
+<p>CS110-Graphics is a graphical addiction to Python written in Python 2.7, for use in teaching environments. It was originally developed by me during the summer of 2017 for Hamilton College's Computer Science department, and built upon and de-cluttered by Professor Alistair Campbell and Paul Magnus in later years.</p>
+<p>The backing environment is based off of tkinter's canvas object. It also includes a Doxygen executable which builds a documentation using the <a href="http://cs110graphics.py">cs110graphics.py</a> file. The most up to date version of this executable (as well as the most up to date output files) have been included in the repository.</p>
+<h2 id="dependencies">Dependencies</h2>
+<p>This project uses tkinter, math, inspect, and Pillow (formerly PIL). Ensure these dependencies are installed before usage.</p>
+<h2 id="usage">Usage</h2>
+<p>Import it into a Python 2.7 file using &quot;from cs110graphics import *&quot;.</p>
+<h2 id="class--method-hierarchy">Class &amp; Method Hierarchy</h2>
+<ul>
+<li>
+<p>Event</p>
+<ul>
+<li>get_button()</li>
+<li>get_description()</li>
+<li>get_key()</li>
+<li>get_mouse_location()</li>
+<li>get_root_mouse_location()</li>
+</ul>
+</li>
+<li>
+<p>EventHandler</p>
+<ul>
+<li>handle_key_press()</li>
+<li>handle_key_release()</li>
+<li>handle_mouse_enter()</li>
+<li>handle_mouse_leave()</li>
+<li>handle_mouse_move()</li>
+<li>handle_mouse_press()</li>
+<li>handle_mouse_release()</li>
+</ul>
+</li>
+<li>
+<p>GraphicalObject</p>
+<ul>
+<li>add_handler()</li>
+<li>get_center()</li>
+<li>get_depth()</li>
+<li>move()</li>
+<li>move_to()</li>
+<li>set_depth()</li>
+</ul>
+</li>
+<li>
+<p>Fillable (extends GraphicalObject)</p>
+<ul>
+<li>get_border_color()</li>
+<li>get_border_width()</li>
+<li>get_fill_color()</li>
+<li>get_pivot()</li>
+<li>rotate()</li>
+<li>scale()</li>
+<li>set_border_color()</li>
+<li>set_border_width()</li>
+<li>set_fill_color ()</li>
+<li>set_pivot ()</li>
+</ul>
+</li>
+<li>
+<p>Circle (extends Fillable)</p>
+<ul>
+<li>set_radius()</li>
+</ul>
+</li>
+<li>
+<p>Oval (extends Fillable)</p>
+<ul>
+<li>set_radii()</li>
+</ul>
+</li>
+<li>
+<p>Polygon (extends Fillable)</p>
+</li>
+<li>
+<p>Square (extends Fillable)</p>
+<ul>
+<li>set_side_length()</li>
+</ul>
+</li>
+<li>
+<p>Rectangle (extends Fillable)</p>
+<ul>
+<li>set_side_lengths()</li>
+</ul>
+</li>
+<li>
+<p>Image (extends GraphicalObject)</p>
+<ul>
+<li>resize()</li>
+<li>rotate()</li>
+<li>scale()</li>
+</ul>
+</li>
+<li>
+<p>Text (extends GraphicalObject)</p>
+<ul>
+<li>set_size()</li>
+<li>set_text()</li>
+</ul>
+</li>
+<li>
+<p>Timer</p>
+<ul>
+<li>set_function()</li>
+<li>set_interval()</li>
+<li>start()</li>
+<li>stop()</li>
+</ul>
+</li>
+<li>
+<p>Window</p>
+<ul>
+<li>add()</li>
+<li>remove()</li>
+<li>get_height()</li>
+<li>get_width()</li>
+<li>set_background()</li>
+<li>set_height()</li>
+<li>set_title()</li>
+<li>set_width()</li>
+</ul>
+</li>
+<li>
+<p>RunWithYieldDelay()</p>
+</li>
+<li>
+<p>StartGraphicsSystem()</p>
+</li>
+</ul>
+<p>More detailed information and code samples can be found within the html folder of this repository (produced by Doxygen).</p>
+<h2 id="todo">Todo</h2>
+<p>Port this to Python 3.</p>
+
+    </body>
+    </html>

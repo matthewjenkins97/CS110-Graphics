@@ -1,0 +1,126 @@
+\hypertarget{classcs110graphics__v2_1_1Event}{}\section{cs110graphics\+\_\+v2.\+Event Class Reference}
+\label{classcs110graphics__v2_1_1Event}\index{cs110graphics\_v2.Event@{cs110graphics\_v2.Event}}
+
+
+An object representing an action from the user.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcs110graphics__v2_1_1Event_aceb04867d670fecdd4e523c6acb8dac6}\label{classcs110graphics__v2_1_1Event_aceb04867d670fecdd4e523c6acb8dac6}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, event)
+\item 
+\mbox{\Hypertarget{classcs110graphics__v2_1_1Event_abc9f036fc823d0b26aae835ac17067e5}\label{classcs110graphics__v2_1_1Event_abc9f036fc823d0b26aae835ac17067e5}} 
+def {\bfseries \+\_\+\+\_\+str\+\_\+\+\_\+} (self)
+\item 
+def \mbox{\hyperlink{classcs110graphics__v2_1_1Event_a15a375ef26543e332aa34410c8695679}{get\+\_\+button}} (self)
+\begin{DoxyCompactList}\small\item\em Returns the mouse button that is attached to the event. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classcs110graphics__v2_1_1Event_ac948aac9242ad8933ae741227eae72bf}{get\+\_\+description}} (self)
+\begin{DoxyCompactList}\small\item\em Returns the description of the event. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classcs110graphics__v2_1_1Event_a05ed480b66fac134b5dca14ee73b97f8}{get\+\_\+key}} (self)
+\begin{DoxyCompactList}\small\item\em Returns the keyboard key that is attached to the event. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classcs110graphics__v2_1_1Event_a2cbccb965cf126442862970d7c5ce365}{get\+\_\+mouse\+\_\+location}} (self)
+\begin{DoxyCompactList}\small\item\em Returns a tuple of the x and y coordinates of the mouse location in the canvas. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classcs110graphics__v2_1_1Event_a138c802fe5378ed103a8c090b7435f4c}{get\+\_\+root\+\_\+mouse\+\_\+location}} (self)
+\begin{DoxyCompactList}\small\item\em Returns a tuple of the x and y coordinates of the mouse location in the window. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An object representing an action from the user. 
+
+Used by \mbox{\hyperlink{classcs110graphics__v2_1_1EventHandler}{Event\+Handler}} objects. User actions that create \mbox{\hyperlink{classcs110graphics__v2_1_1Event}{Event}} objects include\+:
+\begin{DoxyItemize}
+\item Pressing/\+Releasing a key on the keyboard
+\item Pressing/\+Releasing a button on the mouse while on a \mbox{\hyperlink{classcs110graphics__v2_1_1GraphicalObject}{Graphical\+Object}} with an event handler
+\item Moving the mouse while on a \mbox{\hyperlink{classcs110graphics__v2_1_1GraphicalObject}{Graphical\+Object}} with an event handler
+\end{DoxyItemize}
+
+Each of these actions will call their corresponding methods in \mbox{\hyperlink{classcs110graphics__v2_1_1EventHandler}{Event\+Handler}} automatically and give an instance of \mbox{\hyperlink{classcs110graphics__v2_1_1Event}{Event}} to the method called. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classcs110graphics__v2_1_1Event_a15a375ef26543e332aa34410c8695679}\label{classcs110graphics__v2_1_1Event_a15a375ef26543e332aa34410c8695679}} 
+\index{cs110graphics\_v2.Event@{cs110graphics\_v2.Event}!get\_button@{get\_button}}
+\index{get\_button@{get\_button}!cs110graphics\_v2.Event@{cs110graphics\_v2.Event}}
+\subsubsection{\texorpdfstring{get\_button()}{get\_button()}}
+{\footnotesize\ttfamily def cs110graphics\+\_\+v2.\+Event.\+get\+\_\+button (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Returns the mouse button that is attached to the event. 
+
+Returns {\ttfamily None} if the button fails to exist (like if the \mbox{\hyperlink{classcs110graphics__v2_1_1Event}{Event}} handles a key press). \begin{DoxyReturn}{Returns}
+button -\/ str
+\end{DoxyReturn}
+Possible returns are\+:
+\begin{DoxyItemize}
+\item \char`\"{}\+Left Mouse Button\char`\"{}
+\item \char`\"{}\+Right Mouse Button\char`\"{}
+\item \char`\"{}\+Middle Mouse Button\char`\"{}
+\item None 
+\end{DoxyItemize}\mbox{\Hypertarget{classcs110graphics__v2_1_1Event_ac948aac9242ad8933ae741227eae72bf}\label{classcs110graphics__v2_1_1Event_ac948aac9242ad8933ae741227eae72bf}} 
+\index{cs110graphics\_v2.Event@{cs110graphics\_v2.Event}!get\_description@{get\_description}}
+\index{get\_description@{get\_description}!cs110graphics\_v2.Event@{cs110graphics\_v2.Event}}
+\subsubsection{\texorpdfstring{get\_description()}{get\_description()}}
+{\footnotesize\ttfamily def cs110graphics\+\_\+v2.\+Event.\+get\+\_\+description (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Returns the description of the event. 
+
+\begin{DoxyReturn}{Returns}
+description -\/ str
+\end{DoxyReturn}
+Possible returns are\+:
+\begin{DoxyItemize}
+\item \char`\"{}\+Key Press\char`\"{}
+\item \char`\"{}\+Key Release\char`\"{}
+\item \char`\"{}\+Mouse Press\char`\"{}
+\item \char`\"{}\+Mouse Release\char`\"{}
+\item \char`\"{}\+Mouse Move\char`\"{}
+\item \char`\"{}\+Mouse Enter\char`\"{}
+\item \char`\"{}\+Mouse Leave\char`\"{} 
+\end{DoxyItemize}\mbox{\Hypertarget{classcs110graphics__v2_1_1Event_a05ed480b66fac134b5dca14ee73b97f8}\label{classcs110graphics__v2_1_1Event_a05ed480b66fac134b5dca14ee73b97f8}} 
+\index{cs110graphics\_v2.Event@{cs110graphics\_v2.Event}!get\_key@{get\_key}}
+\index{get\_key@{get\_key}!cs110graphics\_v2.Event@{cs110graphics\_v2.Event}}
+\subsubsection{\texorpdfstring{get\_key()}{get\_key()}}
+{\footnotesize\ttfamily def cs110graphics\+\_\+v2.\+Event.\+get\+\_\+key (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Returns the keyboard key that is attached to the event. 
+
+Returns None if the key fails to exist (like if the \mbox{\hyperlink{classcs110graphics__v2_1_1Event}{Event}} handles a mouse press). \begin{DoxyReturn}{Returns}
+key -\/ str
+\end{DoxyReturn}
+Most keys will evaluate to a single character (eg. pressing the a-\/key will result in \char`\"{}a\char`\"{} while pressing shift-\/a will result in \char`\"{}\+A\char`\"{}). \mbox{\Hypertarget{classcs110graphics__v2_1_1Event_a2cbccb965cf126442862970d7c5ce365}\label{classcs110graphics__v2_1_1Event_a2cbccb965cf126442862970d7c5ce365}} 
+\index{cs110graphics\_v2.Event@{cs110graphics\_v2.Event}!get\_mouse\_location@{get\_mouse\_location}}
+\index{get\_mouse\_location@{get\_mouse\_location}!cs110graphics\_v2.Event@{cs110graphics\_v2.Event}}
+\subsubsection{\texorpdfstring{get\_mouse\_location()}{get\_mouse\_location()}}
+{\footnotesize\ttfamily def cs110graphics\+\_\+v2.\+Event.\+get\+\_\+mouse\+\_\+location (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Returns a tuple of the x and y coordinates of the mouse location in the canvas. 
+
+\begin{DoxyReturn}{Returns}
+location -\/ tuple of (int $\ast$ int) -\/ (e.\+g. (200, 200)) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcs110graphics__v2_1_1Event_a138c802fe5378ed103a8c090b7435f4c}\label{classcs110graphics__v2_1_1Event_a138c802fe5378ed103a8c090b7435f4c}} 
+\index{cs110graphics\_v2.Event@{cs110graphics\_v2.Event}!get\_root\_mouse\_location@{get\_root\_mouse\_location}}
+\index{get\_root\_mouse\_location@{get\_root\_mouse\_location}!cs110graphics\_v2.Event@{cs110graphics\_v2.Event}}
+\subsubsection{\texorpdfstring{get\_root\_mouse\_location()}{get\_root\_mouse\_location()}}
+{\footnotesize\ttfamily def cs110graphics\+\_\+v2.\+Event.\+get\+\_\+root\+\_\+mouse\+\_\+location (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Returns a tuple of the x and y coordinates of the mouse location in the window. 
+
+Typically using get\+\_\+mouse\+\_\+location is more applicable. \begin{DoxyReturn}{Returns}
+location -\/ tuple of (int $\ast$ int) -\/ (e.\+g. (200, 200)) 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+cs110graphics\+\_\+v2.\+py\end{DoxyCompactItemize}

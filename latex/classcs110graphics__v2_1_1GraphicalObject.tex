@@ -1,0 +1,138 @@
+\hypertarget{classcs110graphics__v2_1_1GraphicalObject}{}\section{cs110graphics\+\_\+v2.\+Graphical\+Object Class Reference}
+\label{classcs110graphics__v2_1_1GraphicalObject}\index{cs110graphics\_v2.GraphicalObject@{cs110graphics\_v2.GraphicalObject}}
+
+
+This is a parent class of any object which can be put into \mbox{\hyperlink{classcs110graphics__v2_1_1Window}{Window}}.  
+
+
+Inheritance diagram for cs110graphics\+\_\+v2.\+Graphical\+Object\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.527273cm]{classcs110graphics__v2_1_1GraphicalObject}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcs110graphics__v2_1_1GraphicalObject_aa1ee73aca2c290252248c7a9c131cb38}\label{classcs110graphics__v2_1_1GraphicalObject_aa1ee73aca2c290252248c7a9c131cb38}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, window=None, center=(200, 200), depth=50, pivot=None)
+\item 
+def \mbox{\hyperlink{classcs110graphics__v2_1_1GraphicalObject_a71b14f3ad9ad0d345f6ca0d62c4b7a5a}{add\+\_\+handler}} (self, handler\+\_\+object)
+\begin{DoxyCompactList}\small\item\em Adds a handler to the graphical object. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classcs110graphics__v2_1_1GraphicalObject_aa4877c0022307a12b89f5ab25f332c08}{get\+\_\+center}} (self)
+\begin{DoxyCompactList}\small\item\em Returns the center of the object. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classcs110graphics__v2_1_1GraphicalObject_a58c0dc91ebad6f07d6e175b1fd117bf4}{get\+\_\+depth}} (self)
+\begin{DoxyCompactList}\small\item\em Returns the depth of the object. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classcs110graphics__v2_1_1GraphicalObject_a7f6cb53a1fb328404d842685336b89e4}{move}} (self, dx, dy)
+\begin{DoxyCompactList}\small\item\em Moves the object dx pixels horizontally and dy pixels vertically. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classcs110graphics__v2_1_1GraphicalObject_ab6ac4af925b79fec3ca93b3fafed82ff}{move\+\_\+to}} (self, point)
+\begin{DoxyCompactList}\small\item\em Moves a graphical object to a point. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classcs110graphics__v2_1_1GraphicalObject_a070f9867df491e5b2371992be96c3529}{set\+\_\+depth}} (self, depth)
+\begin{DoxyCompactList}\small\item\em Sets the depth of the \mbox{\hyperlink{classcs110graphics__v2_1_1GraphicalObject}{Graphical\+Object}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is a parent class of any object which can be put into \mbox{\hyperlink{classcs110graphics__v2_1_1Window}{Window}}. 
+
+No constructor exists in this class, but its methods are used by other objects that extend/inherit this class.
+
+Default values\+:
+\begin{DoxyItemize}
+\item depth = 50
+\item center = (200, 200) 
+\end{DoxyItemize}
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classcs110graphics__v2_1_1GraphicalObject_a71b14f3ad9ad0d345f6ca0d62c4b7a5a}\label{classcs110graphics__v2_1_1GraphicalObject_a71b14f3ad9ad0d345f6ca0d62c4b7a5a}} 
+\index{cs110graphics\_v2.GraphicalObject@{cs110graphics\_v2.GraphicalObject}!add\_handler@{add\_handler}}
+\index{add\_handler@{add\_handler}!cs110graphics\_v2.GraphicalObject@{cs110graphics\_v2.GraphicalObject}}
+\subsubsection{\texorpdfstring{add\_handler()}{add\_handler()}}
+{\footnotesize\ttfamily def cs110graphics\+\_\+v2.\+Graphical\+Object.\+add\+\_\+handler (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{handler\+\_\+object }\end{DoxyParamCaption})}
+
+
+
+Adds a handler to the graphical object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handler\+\_\+object} & -\/ \mbox{\hyperlink{classcs110graphics__v2_1_1EventHandler}{Event\+Handler}} -\/ the object that handles the events for this \mbox{\hyperlink{classcs110graphics__v2_1_1GraphicalObject}{Graphical\+Object}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcs110graphics__v2_1_1GraphicalObject_aa4877c0022307a12b89f5ab25f332c08}\label{classcs110graphics__v2_1_1GraphicalObject_aa4877c0022307a12b89f5ab25f332c08}} 
+\index{cs110graphics\_v2.GraphicalObject@{cs110graphics\_v2.GraphicalObject}!get\_center@{get\_center}}
+\index{get\_center@{get\_center}!cs110graphics\_v2.GraphicalObject@{cs110graphics\_v2.GraphicalObject}}
+\subsubsection{\texorpdfstring{get\_center()}{get\_center()}}
+{\footnotesize\ttfamily def cs110graphics\+\_\+v2.\+Graphical\+Object.\+get\+\_\+center (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Returns the center of the object. 
+
+\begin{DoxyReturn}{Returns}
+center -\/ tuple 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcs110graphics__v2_1_1GraphicalObject_a58c0dc91ebad6f07d6e175b1fd117bf4}\label{classcs110graphics__v2_1_1GraphicalObject_a58c0dc91ebad6f07d6e175b1fd117bf4}} 
+\index{cs110graphics\_v2.GraphicalObject@{cs110graphics\_v2.GraphicalObject}!get\_depth@{get\_depth}}
+\index{get\_depth@{get\_depth}!cs110graphics\_v2.GraphicalObject@{cs110graphics\_v2.GraphicalObject}}
+\subsubsection{\texorpdfstring{get\_depth()}{get\_depth()}}
+{\footnotesize\ttfamily def cs110graphics\+\_\+v2.\+Graphical\+Object.\+get\+\_\+depth (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Returns the depth of the object. 
+
+\begin{DoxyReturn}{Returns}
+depth -\/ int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcs110graphics__v2_1_1GraphicalObject_a7f6cb53a1fb328404d842685336b89e4}\label{classcs110graphics__v2_1_1GraphicalObject_a7f6cb53a1fb328404d842685336b89e4}} 
+\index{cs110graphics\_v2.GraphicalObject@{cs110graphics\_v2.GraphicalObject}!move@{move}}
+\index{move@{move}!cs110graphics\_v2.GraphicalObject@{cs110graphics\_v2.GraphicalObject}}
+\subsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily def cs110graphics\+\_\+v2.\+Graphical\+Object.\+move (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{dx,  }\item[{}]{dy }\end{DoxyParamCaption})}
+
+
+
+Moves the object dx pixels horizontally and dy pixels vertically. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dx} & -\/ int \\
+\hline
+{\em dy} & -\/ int \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcs110graphics__v2_1_1GraphicalObject_ab6ac4af925b79fec3ca93b3fafed82ff}\label{classcs110graphics__v2_1_1GraphicalObject_ab6ac4af925b79fec3ca93b3fafed82ff}} 
+\index{cs110graphics\_v2.GraphicalObject@{cs110graphics\_v2.GraphicalObject}!move\_to@{move\_to}}
+\index{move\_to@{move\_to}!cs110graphics\_v2.GraphicalObject@{cs110graphics\_v2.GraphicalObject}}
+\subsubsection{\texorpdfstring{move\_to()}{move\_to()}}
+{\footnotesize\ttfamily def cs110graphics\+\_\+v2.\+Graphical\+Object.\+move\+\_\+to (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{point }\end{DoxyParamCaption})}
+
+
+
+Moves a graphical object to a point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & -\/ tuple of (int $\ast$ int) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcs110graphics__v2_1_1GraphicalObject_a070f9867df491e5b2371992be96c3529}\label{classcs110graphics__v2_1_1GraphicalObject_a070f9867df491e5b2371992be96c3529}} 
+\index{cs110graphics\_v2.GraphicalObject@{cs110graphics\_v2.GraphicalObject}!set\_depth@{set\_depth}}
+\index{set\_depth@{set\_depth}!cs110graphics\_v2.GraphicalObject@{cs110graphics\_v2.GraphicalObject}}
+\subsubsection{\texorpdfstring{set\_depth()}{set\_depth()}}
+{\footnotesize\ttfamily def cs110graphics\+\_\+v2.\+Graphical\+Object.\+set\+\_\+depth (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{depth }\end{DoxyParamCaption})}
+
+
+
+Sets the depth of the \mbox{\hyperlink{classcs110graphics__v2_1_1GraphicalObject}{Graphical\+Object}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em depth} & -\/ int \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+cs110graphics\+\_\+v2.\+py\end{DoxyCompactItemize}

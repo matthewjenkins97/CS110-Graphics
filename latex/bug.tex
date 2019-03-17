@@ -1,0 +1,9 @@
+
+\begin{DoxyRefList}
+\item[Member \mbox{\hyperlink{classcs110graphics__v2_1_1EventHandler_a642711bb1f5c49ed0f0a1caf05dc14e4}{cs110graphics\+\_\+v2.Event\+Handler.handle\+\_\+mouse\+\_\+enter}} (self, event)]\label{bug__bug000001}%
+\Hypertarget{bug__bug000001}%
+Overrides of this method is likely to be called more often than expected and many \mbox{\hyperlink{classcs110graphics__v2_1_1GraphicalObject}{Graphical\+Object}} methods will not work correctly with when called within the method, avoid using this if possible. 
+\item[Member \mbox{\hyperlink{classcs110graphics__v2_1_1EventHandler_ab7da753bd26e28aed9bce86968314ae1}{cs110graphics\+\_\+v2.Event\+Handler.handle\+\_\+mouse\+\_\+press}} (self, event)]\label{bug__bug000002}%
+\Hypertarget{bug__bug000002}%
+Graphical\+Objects may not update correctly if moved or modified within this method. You can use this for setting variables, though.
+\end{DoxyRefList}

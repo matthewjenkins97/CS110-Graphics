@@ -1,0 +1,127 @@
+\hypertarget{classcs110graphics__v2_1_1Image}{}\section{cs110graphics\+\_\+v2.\+Image Class Reference}
+\label{classcs110graphics__v2_1_1Image}\index{cs110graphics\_v2.Image@{cs110graphics\_v2.Image}}
+
+
+An image, which can be added to a \mbox{\hyperlink{classcs110graphics__v2_1_1Window}{Window}} object.  
+
+
+Inheritance diagram for cs110graphics\+\_\+v2.\+Image\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcs110graphics__v2_1_1Image}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classcs110graphics__v2_1_1Image_a01429cee1632c0b5e26904701f1952cc}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, window, image\+\_\+loc, width=100, height=100, center=(200, 200))
+\item 
+def \mbox{\hyperlink{classcs110graphics__v2_1_1Image_a55c1b238c7c79d2371321cf624d9f23d}{resize}} (self, width, height)
+\begin{DoxyCompactList}\small\item\em Resizes the \mbox{\hyperlink{classcs110graphics__v2_1_1Image}{Image}}. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classcs110graphics__v2_1_1Image_aaa386a7e289febe8cdbed32bab605477}{rotate}} (self, degrees)
+\begin{DoxyCompactList}\small\item\em Rotates an object. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classcs110graphics__v2_1_1Image_aa8ac3ee1d0b243e3398f949f8ff27cd6}{scale}} (self, factor)
+\begin{DoxyCompactList}\small\item\em Scales the image according to the factor. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classcs110graphics__v2_1_1Image_a3ae3fd4aea37228fd427d6efa6d92d36}{size}} (self)
+\begin{DoxyCompactList}\small\item\em Returns a tuple of the width and height of the image. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An image, which can be added to a \mbox{\hyperlink{classcs110graphics__v2_1_1Window}{Window}} object. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcs110graphics__v2_1_1Image_a01429cee1632c0b5e26904701f1952cc}\label{classcs110graphics__v2_1_1Image_a01429cee1632c0b5e26904701f1952cc}} 
+\index{cs110graphics\_v2.Image@{cs110graphics\_v2.Image}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!cs110graphics\_v2.Image@{cs110graphics\_v2.Image}}
+\subsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def cs110graphics\+\_\+v2.\+Image.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{window,  }\item[{}]{image\+\_\+loc,  }\item[{}]{width = {\ttfamily 100},  }\item[{}]{height = {\ttfamily 100},  }\item[{}]{center = {\ttfamily (200,~200)} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & -\/ \mbox{\hyperlink{classcs110graphics__v2_1_1Window}{Window}} -\/ the window which the object will be added to \\
+\hline
+{\em image\+\_\+loc} & -\/ str-\/ The file location for an image, see below for instructions regarding file locations \\
+\hline
+{\em width} & -\/ int -\/ {\bfseries{(default\+: 100)}} the width of the image \\
+\hline
+{\em height} & -\/ int -\/ {\bfseries{(default\+: 100)}} the height of the image \\
+\hline
+{\em center} & -\/ tuple of (int $\ast$ int) -\/ {\bfseries{(default\+: (200, 200))}} the center location for the image\\
+\hline
+\end{DoxyParams}
+File locations\+:
+\begin{DoxyItemize}
+\item If a file is in the same folder/directory as the program, just use the name of the file
+\item Otherwise use a file path\+: eg. \char`\"{}$\sim$/110/bots/images/bot.\+jpg\char`\"{} or \char`\"{}./images/bot.\+jpg\char`\"{}
+\end{DoxyItemize}
+
+Note that \char`\"{}.\char`\"{} represents the current directory and \char`\"{}..\char`\"{} represents the parent directory. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classcs110graphics__v2_1_1Image_a55c1b238c7c79d2371321cf624d9f23d}\label{classcs110graphics__v2_1_1Image_a55c1b238c7c79d2371321cf624d9f23d}} 
+\index{cs110graphics\_v2.Image@{cs110graphics\_v2.Image}!resize@{resize}}
+\index{resize@{resize}!cs110graphics\_v2.Image@{cs110graphics\_v2.Image}}
+\subsubsection{\texorpdfstring{resize()}{resize()}}
+{\footnotesize\ttfamily def cs110graphics\+\_\+v2.\+Image.\+resize (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{width,  }\item[{}]{height }\end{DoxyParamCaption})}
+
+
+
+Resizes the \mbox{\hyperlink{classcs110graphics__v2_1_1Image}{Image}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & -\/ int \\
+\hline
+{\em height} & -\/ int \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcs110graphics__v2_1_1Image_aaa386a7e289febe8cdbed32bab605477}\label{classcs110graphics__v2_1_1Image_aaa386a7e289febe8cdbed32bab605477}} 
+\index{cs110graphics\_v2.Image@{cs110graphics\_v2.Image}!rotate@{rotate}}
+\index{rotate@{rotate}!cs110graphics\_v2.Image@{cs110graphics\_v2.Image}}
+\subsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily def cs110graphics\+\_\+v2.\+Image.\+rotate (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{degrees }\end{DoxyParamCaption})}
+
+
+
+Rotates an object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em degrees} & -\/ int \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcs110graphics__v2_1_1Image_aa8ac3ee1d0b243e3398f949f8ff27cd6}\label{classcs110graphics__v2_1_1Image_aa8ac3ee1d0b243e3398f949f8ff27cd6}} 
+\index{cs110graphics\_v2.Image@{cs110graphics\_v2.Image}!scale@{scale}}
+\index{scale@{scale}!cs110graphics\_v2.Image@{cs110graphics\_v2.Image}}
+\subsubsection{\texorpdfstring{scale()}{scale()}}
+{\footnotesize\ttfamily def cs110graphics\+\_\+v2.\+Image.\+scale (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{factor }\end{DoxyParamCaption})}
+
+
+
+Scales the image according to the factor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em factor} & -\/ float \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcs110graphics__v2_1_1Image_a3ae3fd4aea37228fd427d6efa6d92d36}\label{classcs110graphics__v2_1_1Image_a3ae3fd4aea37228fd427d6efa6d92d36}} 
+\index{cs110graphics\_v2.Image@{cs110graphics\_v2.Image}!size@{size}}
+\index{size@{size}!cs110graphics\_v2.Image@{cs110graphics\_v2.Image}}
+\subsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily def cs110graphics\+\_\+v2.\+Image.\+size (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Returns a tuple of the width and height of the image. 
+
+\begin{DoxyReturn}{Returns}
+size -\/ tuple of (int $\ast$ int) 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+cs110graphics\+\_\+v2.\+py\end{DoxyCompactItemize}

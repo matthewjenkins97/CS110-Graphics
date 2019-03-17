@@ -1,0 +1,210 @@
+\hypertarget{classcs110graphics__v2_1_1Fillable}{}\section{cs110graphics\+\_\+v2.\+Fillable Class Reference}
+\label{classcs110graphics__v2_1_1Fillable}\index{cs110graphics\_v2.Fillable@{cs110graphics\_v2.Fillable}}
+
+
+This is a parent class of any object which can have its colors modified.  
+
+
+Inheritance diagram for cs110graphics\+\_\+v2.\+Fillable\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.527273cm]{classcs110graphics__v2_1_1Fillable}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcs110graphics__v2_1_1Fillable_a989f90dbdca59e46f375cd08681cd37c}\label{classcs110graphics__v2_1_1Fillable_a989f90dbdca59e46f375cd08681cd37c}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, window=None, center=(200, 200), points=\mbox{[}$\,$\mbox{]}, pivot=(200, 200), depth=50)
+\item 
+def \mbox{\hyperlink{classcs110graphics__v2_1_1Fillable_a7814c409d4cdf9c6c006bb12a64c9e90}{get\+\_\+border\+\_\+color}} (self)
+\begin{DoxyCompactList}\small\item\em Returns the border color. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classcs110graphics__v2_1_1Fillable_a7e9e8b8996fba870bf9bc4eacd5be6aa}{get\+\_\+border\+\_\+width}} (self)
+\begin{DoxyCompactList}\small\item\em Returns the border width. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classcs110graphics__v2_1_1Fillable_abc6f79dd754321c041f4befeb37e21f0}{get\+\_\+fill\+\_\+color}} (self)
+\begin{DoxyCompactList}\small\item\em Returns fill color. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classcs110graphics__v2_1_1Fillable_a098238caa8fec93e7510bd271f7813a5}{get\+\_\+pivot}} (self)
+\begin{DoxyCompactList}\small\item\em Returns the pivot point. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classcs110graphics__v2_1_1Fillable_aee03142975056e9f3cbd5b7b5f81bcb7}{rotate}} (self, degrees)
+\begin{DoxyCompactList}\small\item\em Rotates the object. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classcs110graphics__v2_1_1Fillable_af023a8511e9e9149214a3bf8e3a50aae}{scale}} (self, factor)
+\begin{DoxyCompactList}\small\item\em Scales the object up or down depending on the factor. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classcs110graphics__v2_1_1Fillable_a1da4fb755538b915c79913f1a17dcbf7}{set\+\_\+border\+\_\+color}} (self, color)
+\begin{DoxyCompactList}\small\item\em Sets the border color. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classcs110graphics__v2_1_1Fillable_a6576e9d1634853c8784107d505b50c15}{set\+\_\+border\+\_\+width}} (self, width)
+\begin{DoxyCompactList}\small\item\em Sets the border width. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classcs110graphics__v2_1_1Fillable_aa3bc1ae6a16af93e845af7174f67946d}{set\+\_\+fill\+\_\+color}} (self, color)
+\begin{DoxyCompactList}\small\item\em Sets the fill color. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classcs110graphics__v2_1_1Fillable_a1be2f575dbf8963ecba1e9e9adec1206}{set\+\_\+pivot}} (self, pivot)
+\begin{DoxyCompactList}\small\item\em Sets the pivot point. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is a parent class of any object which can have its colors modified. 
+
+No constructor exists in this class, but its methods are used by other objects that extend/inherit this class.
+
+Default values\+:
+\begin{DoxyItemize}
+\item border color = \char`\"{}black\char`\"{}
+\item border width = 2
+\item fill color = \char`\"{}white\char`\"{}
+\item pivot = center 
+\end{DoxyItemize}
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classcs110graphics__v2_1_1Fillable_a7814c409d4cdf9c6c006bb12a64c9e90}\label{classcs110graphics__v2_1_1Fillable_a7814c409d4cdf9c6c006bb12a64c9e90}} 
+\index{cs110graphics\_v2.Fillable@{cs110graphics\_v2.Fillable}!get\_border\_color@{get\_border\_color}}
+\index{get\_border\_color@{get\_border\_color}!cs110graphics\_v2.Fillable@{cs110graphics\_v2.Fillable}}
+\subsubsection{\texorpdfstring{get\_border\_color()}{get\_border\_color()}}
+{\footnotesize\ttfamily def cs110graphics\+\_\+v2.\+Fillable.\+get\+\_\+border\+\_\+color (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Returns the border color. 
+
+\begin{DoxyReturn}{Returns}
+border\+\_\+color -\/ str -\/ Can be either the name of a color (\char`\"{}yellow\char`\"{}), or a hex code (\char`\"{}\#\+F\+F\+F\+F00\char`\"{}) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcs110graphics__v2_1_1Fillable_a7e9e8b8996fba870bf9bc4eacd5be6aa}\label{classcs110graphics__v2_1_1Fillable_a7e9e8b8996fba870bf9bc4eacd5be6aa}} 
+\index{cs110graphics\_v2.Fillable@{cs110graphics\_v2.Fillable}!get\_border\_width@{get\_border\_width}}
+\index{get\_border\_width@{get\_border\_width}!cs110graphics\_v2.Fillable@{cs110graphics\_v2.Fillable}}
+\subsubsection{\texorpdfstring{get\_border\_width()}{get\_border\_width()}}
+{\footnotesize\ttfamily def cs110graphics\+\_\+v2.\+Fillable.\+get\+\_\+border\+\_\+width (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Returns the border width. 
+
+\begin{DoxyReturn}{Returns}
+border\+\_\+width -\/ int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcs110graphics__v2_1_1Fillable_abc6f79dd754321c041f4befeb37e21f0}\label{classcs110graphics__v2_1_1Fillable_abc6f79dd754321c041f4befeb37e21f0}} 
+\index{cs110graphics\_v2.Fillable@{cs110graphics\_v2.Fillable}!get\_fill\_color@{get\_fill\_color}}
+\index{get\_fill\_color@{get\_fill\_color}!cs110graphics\_v2.Fillable@{cs110graphics\_v2.Fillable}}
+\subsubsection{\texorpdfstring{get\_fill\_color()}{get\_fill\_color()}}
+{\footnotesize\ttfamily def cs110graphics\+\_\+v2.\+Fillable.\+get\+\_\+fill\+\_\+color (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Returns fill color. 
+
+\begin{DoxyReturn}{Returns}
+color -\/ int -\/ Can be either the name of a color (\char`\"{}yellow\char`\"{}), or a hex code (\char`\"{}\#\+F\+F\+F\+F00\char`\"{}) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcs110graphics__v2_1_1Fillable_a098238caa8fec93e7510bd271f7813a5}\label{classcs110graphics__v2_1_1Fillable_a098238caa8fec93e7510bd271f7813a5}} 
+\index{cs110graphics\_v2.Fillable@{cs110graphics\_v2.Fillable}!get\_pivot@{get\_pivot}}
+\index{get\_pivot@{get\_pivot}!cs110graphics\_v2.Fillable@{cs110graphics\_v2.Fillable}}
+\subsubsection{\texorpdfstring{get\_pivot()}{get\_pivot()}}
+{\footnotesize\ttfamily def cs110graphics\+\_\+v2.\+Fillable.\+get\+\_\+pivot (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Returns the pivot point. 
+
+\begin{DoxyReturn}{Returns}
+pivot -\/ tuple (int $\ast$ int) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcs110graphics__v2_1_1Fillable_aee03142975056e9f3cbd5b7b5f81bcb7}\label{classcs110graphics__v2_1_1Fillable_aee03142975056e9f3cbd5b7b5f81bcb7}} 
+\index{cs110graphics\_v2.Fillable@{cs110graphics\_v2.Fillable}!rotate@{rotate}}
+\index{rotate@{rotate}!cs110graphics\_v2.Fillable@{cs110graphics\_v2.Fillable}}
+\subsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily def cs110graphics\+\_\+v2.\+Fillable.\+rotate (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{degrees }\end{DoxyParamCaption})}
+
+
+
+Rotates the object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em degrees} & -\/ int \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classcs110graphics__v2_1_1Oval_af8c159d2ab0f84dd27099639c9b002d3}{cs110graphics\+\_\+v2.\+Oval}}, and \mbox{\hyperlink{classcs110graphics__v2_1_1Circle_aabea5d516684d384910e7309ed0aba31}{cs110graphics\+\_\+v2.\+Circle}}.
+
+\mbox{\Hypertarget{classcs110graphics__v2_1_1Fillable_af023a8511e9e9149214a3bf8e3a50aae}\label{classcs110graphics__v2_1_1Fillable_af023a8511e9e9149214a3bf8e3a50aae}} 
+\index{cs110graphics\_v2.Fillable@{cs110graphics\_v2.Fillable}!scale@{scale}}
+\index{scale@{scale}!cs110graphics\_v2.Fillable@{cs110graphics\_v2.Fillable}}
+\subsubsection{\texorpdfstring{scale()}{scale()}}
+{\footnotesize\ttfamily def cs110graphics\+\_\+v2.\+Fillable.\+scale (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{factor }\end{DoxyParamCaption})}
+
+
+
+Scales the object up or down depending on the factor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em factor} & -\/ float \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classcs110graphics__v2_1_1Oval_abb433bbfccb014b097f09c063530a4e0}{cs110graphics\+\_\+v2.\+Oval}}, and \mbox{\hyperlink{classcs110graphics__v2_1_1Circle_a4a04c8a0ec27e30f3fd5af5fe428423b}{cs110graphics\+\_\+v2.\+Circle}}.
+
+\mbox{\Hypertarget{classcs110graphics__v2_1_1Fillable_a1da4fb755538b915c79913f1a17dcbf7}\label{classcs110graphics__v2_1_1Fillable_a1da4fb755538b915c79913f1a17dcbf7}} 
+\index{cs110graphics\_v2.Fillable@{cs110graphics\_v2.Fillable}!set\_border\_color@{set\_border\_color}}
+\index{set\_border\_color@{set\_border\_color}!cs110graphics\_v2.Fillable@{cs110graphics\_v2.Fillable}}
+\subsubsection{\texorpdfstring{set\_border\_color()}{set\_border\_color()}}
+{\footnotesize\ttfamily def cs110graphics\+\_\+v2.\+Fillable.\+set\+\_\+border\+\_\+color (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{color }\end{DoxyParamCaption})}
+
+
+
+Sets the border color. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & -\/ string -\/ Can be either the name of a color (\char`\"{}yellow\char`\"{}), or a hex code (\char`\"{}\#\+F\+F\+F\+F00\char`\"{}) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcs110graphics__v2_1_1Fillable_a6576e9d1634853c8784107d505b50c15}\label{classcs110graphics__v2_1_1Fillable_a6576e9d1634853c8784107d505b50c15}} 
+\index{cs110graphics\_v2.Fillable@{cs110graphics\_v2.Fillable}!set\_border\_width@{set\_border\_width}}
+\index{set\_border\_width@{set\_border\_width}!cs110graphics\_v2.Fillable@{cs110graphics\_v2.Fillable}}
+\subsubsection{\texorpdfstring{set\_border\_width()}{set\_border\_width()}}
+{\footnotesize\ttfamily def cs110graphics\+\_\+v2.\+Fillable.\+set\+\_\+border\+\_\+width (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{width }\end{DoxyParamCaption})}
+
+
+
+Sets the border width. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & -\/ int \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcs110graphics__v2_1_1Fillable_aa3bc1ae6a16af93e845af7174f67946d}\label{classcs110graphics__v2_1_1Fillable_aa3bc1ae6a16af93e845af7174f67946d}} 
+\index{cs110graphics\_v2.Fillable@{cs110graphics\_v2.Fillable}!set\_fill\_color@{set\_fill\_color}}
+\index{set\_fill\_color@{set\_fill\_color}!cs110graphics\_v2.Fillable@{cs110graphics\_v2.Fillable}}
+\subsubsection{\texorpdfstring{set\_fill\_color()}{set\_fill\_color()}}
+{\footnotesize\ttfamily def cs110graphics\+\_\+v2.\+Fillable.\+set\+\_\+fill\+\_\+color (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{color }\end{DoxyParamCaption})}
+
+
+
+Sets the fill color. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & -\/ string -\/ Can be either the name of a color (\char`\"{}yellow\char`\"{}), or a hex code (\char`\"{}\#\+F\+F\+F\+F00\char`\"{}) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classcs110graphics__v2_1_1Fillable_a1be2f575dbf8963ecba1e9e9adec1206}\label{classcs110graphics__v2_1_1Fillable_a1be2f575dbf8963ecba1e9e9adec1206}} 
+\index{cs110graphics\_v2.Fillable@{cs110graphics\_v2.Fillable}!set\_pivot@{set\_pivot}}
+\index{set\_pivot@{set\_pivot}!cs110graphics\_v2.Fillable@{cs110graphics\_v2.Fillable}}
+\subsubsection{\texorpdfstring{set\_pivot()}{set\_pivot()}}
+{\footnotesize\ttfamily def cs110graphics\+\_\+v2.\+Fillable.\+set\+\_\+pivot (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{pivot }\end{DoxyParamCaption})}
+
+
+
+Sets the pivot point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pivot} & -\/ tuple of (int $\ast$ int) \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+cs110graphics\+\_\+v2.\+py\end{DoxyCompactItemize}
